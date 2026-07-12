@@ -1,0 +1,11 @@
+pwd= show my current location
+ls= shows files and folders in the current location
+cd= moves to the another folder
+cd .. = goes back to the previous folder.
+cd ~ = take me to my home folder.
+cd . = stay in the current location
+mkdir = make a new directory or creates a new folder
+New-Item = creates a new file.
+cat = shows the content inside a file
+start = open a file
+Remove-Item thefoldername -Recurse = Deletes the folder and everything inside it.
