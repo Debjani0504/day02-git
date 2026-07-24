@@ -1,0 +1,27 @@
+## Transaction and ACID Properties
+# What is transaction?
+A transaction is a group of SQL operations as one unit of work. Either all operations are completed successfully, or all are cancelled.
+# ACID Properties
+Atomacity: All operation are succeded together or all are cancelled.
+Consistency: The database always remains valids and follows the rules.
+Isolation: Each transaction works independently even when many users use the database simultaneously.
+Durability: Once committed, data remains as saved permanently.
+## Healthcare Billing Example
+Step 1: Deduct the insurance ammount.
+step 2: Add the remaining amount to the patient's bill.
+step 3: Mark the claim as paid.
+
+# Risks
+If the system crashes after step 1
+Insurance amount is deducted, but the patient's bill is not updated.
+
+If the system crashes after step 2
+Insurance is deducted and the bill is updated, but the claim is not marked as paid.
+
+If the system crashes after step 3
+If the transaction was not committed, the database rolls back all changes. If it was committed, the changes remain saved because of Durability.
+
+## How Atomicity Solves This
+Atomicity ensures that all three steps are completed together. If any step fails, the database cancels the entire transaction, prevanting incomplete or incorrect data.
+
+
