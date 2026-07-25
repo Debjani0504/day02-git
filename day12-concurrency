@@ -1,0 +1,27 @@
+## Day12 concurrencynotes
+# what is concurrency?
+Concurrency means multiple users or multiple transactions accessing the same database at the same time.
+
+# Isolation
+Isolation means each transaction works as it is the only transaction running, even though many transactions are actually running at the same time. It prevent those transaction from interfering with each other.
+
+# Dirty Read
+A dirty read happens when one transaction reads the data has changed by another transaction but not yet committed.
+
+# Non-Repeatable read
+When the same row is read twice within one transaction, and the value is different because another transaction updated and committed it.
+
+# Pathom Read
+A panthom read happens when rows appear or existing row disappear between two identical queries in the same transaction, is called panthom read.
+
+# Isolation Levels
+Isolation has 4 levels---> Read Uncommitted, read Committed, Repeatable Read, Serializable
+
+# Shared Lock
+A shared lock is used when a transaction only wants to read the data.
+
+# Exclusive lock
+An exclusive lock is used them a transaction wants to INSERT, UPDATE or DELETE data
+
+# Deadlock
+A deadlock is a situation where two or more transaction wait indefinitely for each other to release locks and preventing all of them from proceeding.
