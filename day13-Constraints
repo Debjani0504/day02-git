@@ -1,0 +1,7 @@
+## COnstraints
+|Column|Constraint|Type|
+|Patient_ID|PRIMARY KEY(NOT NULL+UNIQUE)+AUTO_INCREMENT|Cannot be empty and should be unique|
+|Name|NOT NULL|Cannot be empty|
+|Email|UNIQUE|Cannot repeated|
+|Fee|CHECK|Cannot be negative|
+|Status|DEFAULT|Should have a defalut value while users does not give any value|
