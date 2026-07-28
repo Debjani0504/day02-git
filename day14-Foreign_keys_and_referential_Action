@@ -1,0 +1,18 @@
+## Foreign_keys_Referential_Actions
+Patient--->Apointments
+ON DELETE RESTRICT
+Reasons: Hospital should keep appointment history for legal and medical records.
+that means 1st we have to delete the appointments then only we are allow to delete the patient's data.
+
+Appointment---->Appointment_Notes
+ON DELETE CASCADE
+Reason: Notes only exist because the appointment exists.
+that means along the appointments the appointments notes will also delete.
+
+Doctors--->Appointments
+ON DELETE RESTRICT
+If the doctor leave the hospital then appointment should disappear? answer is No. Because the Appointments are still part of the hospital  records.
+
+Patient---> Presciptions
+ON DELETE RESTRICT
+If a patient is deleted, should presscription disappear? NO. Presciption also the medical records. So, medical record should not be deleted.
