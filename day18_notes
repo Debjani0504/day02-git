@@ -1,0 +1,28 @@
+## today's session is all about using SELECT for retrieving data from databse.
+Suppose we a table containg the columns named with
+patients
+doctors
+departments
+appointments
+billing
+
+---show all patients
+SELECT * FROM patients;
+
+---Show patient first_name,last_name, cities
+SELECT first_name, last_name, city FROM patients;
+
+---show doctors and their specialties
+SELECT first_name, last_name, specialty FROM doctors;
+
+--show the all departments
+SELECT * FROM departments;
+
+---show the paitent IDs and phone numbers
+SELECT patient_id, phone_numbers FROM patients;
+
+---show the doctors_id, name and specialty
+SELECT doctor_id, first_name AS Doctor_Name, specialty FROM doctors;
+
+---show the bill amount and payment status
+SELECT bill_amount, payment_status FROM billing.
