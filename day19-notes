@@ -1,0 +1,60 @@
+-- Use the healthcare database
+USE healthcare;
+
+-- 1. Display all records from the patients table
+SELECT * FROM patients;
+
+-- 2. Display patients whose city is Kolkata
+SELECT *
+FROM patients
+WHERE city = 'Kolkata';
+
+-- 3. Display patients whose city is not Kolkata
+SELECT *
+FROM patients
+WHERE city != 'Kolkata';
+
+-- 4. Display active patients
+SELECT *
+FROM patients
+WHERE is_active = 1;
+
+-- 5. Display appointments where the fee is greater than 1000
+SELECT *
+FROM appointments
+WHERE fee > 1000;
+
+-- 6. Display appointments where the fee is less than or equal to 500
+SELECT *
+FROM appointments
+WHERE fee <= 500;
+
+-- 7. Display active patients who are from Kolkata (AND)
+SELECT *
+FROM patients
+WHERE city = 'Kolkata'
+AND is_active = 1;
+
+-- 8. Display patients who are from Kolkata or Howrah (OR)
+SELECT *
+FROM patients
+WHERE city = 'Kolkata'
+OR city = 'Howrah';
+
+-- 9. Display appointments that are not cancelled (NOT)
+SELECT *
+FROM appointments
+WHERE NOT status = 'Cancelled';
+
+-- 10. Without parentheses
+SELECT *
+FROM appointments
+WHERE status = 'Scheduled'
+OR status = 'Confirmed'
+AND fee > 1000;
+
+-- 11. With parentheses (recommended)
+SELECT *
+FROM appointments
+WHERE (status = 'Scheduled' OR status = 'Confirmed')
+AND fee > 1000;
