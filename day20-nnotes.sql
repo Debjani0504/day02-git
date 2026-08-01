@@ -1,0 +1,14 @@
+USE healthcare_db;
+SHOW Tables;
+SELECT * FROM patients;
+SELECT patient_id, first_name AS patient_name, last_name AS patient_surname, date_of_birth, gender, phone, city, registered_date, is_active FROM patients ORDER BY first_name, date_of_birth ASC;
+SELECT * FROM appointments;
+SELECT appointment_id, patient_id, doctor_id, appointment_date, fee, status, notes FROM appointments ORDER BY fee DESC, appointment_date DESC;
+SELECT * FROM doctors;
+SELECT doctor_id, first_name AS Doctor_name, specialty, department_id, salary FROM doctors ORDER BY specialty ASC, first_name ASC;
+SELECT * FROM appointments;
+SELECT appointment_id, patient_id, doctor_id, appointment_date, fee, status , notes FROM appointments WHERE status = 'completed' ORDER by appointment_date DESC;
+SELECT * FROM patients;
+SELECT patient_id, first_name AS Patient_name, last_name AS Patient_surname, date_of_birth, gender, phone, city, registered_date, is_active FROM patients WHERE is_active= 1 ORDER BY date_of_birth ASC;
+SELECT * FROM appointments;
+SELECT * FROM appointments ORDER BY status ASC, fee DESC;
