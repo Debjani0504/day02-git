@@ -1,0 +1,15 @@
+USE healthcare_db;
+SHOW TABLES;
+SELECT first_name, last_name FROM patients WHERE last_name LIKE 'S%';
+SELECT first_name, last_name FROM patients WHERE first_name LIKE 'a%';
+SELECT * FROM patients WHERE city LIKE '%MUm%';
+SELECT first_name FROM patients WHERE first_name LIKE '_____';
+SELECT * FROM patients WHERE first_name LIKE 'A%';
+SELECT * FROM patients WHERE last_name LIKE 's%';
+SELECT * FROM patients WHERE first_name LIKE '%a';
+SELECT * FROM patients WHERE city NOT LIKE '%pur%';
+SELECT first_name FROM patients;
+SELECT first_name FROm patients WHERE first_name LIKE '_a%';
+SELECT * FROM doctors WHERE specialty LIKE '%ology%';
+SELECT * FROM patients;
+SELECT * FROM patients WHERE city LIKE '%a%';
