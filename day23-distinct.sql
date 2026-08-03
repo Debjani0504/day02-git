@@ -1,0 +1,11 @@
+USE healthcare_db;
+SHOW TABLES;
+SELECT * FROM patients;
+SELECT DISTINCT city FROM patients;
+SELECT * FROM doctors;
+SELECT DISTINCT specialty FROM doctors;
+SELECT DISTINCT status FROM appointments;
+SELECT DISTINCT doctor_id, status FROM appointments;
+SELECT * FROM patients;
+SELECT COUNT(DISTINCT city) FROM patients;
+SELECT COUNT(DISTINCT specialty) FROM doctors;
