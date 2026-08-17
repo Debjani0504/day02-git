@@ -1,0 +1,8 @@
+Seven steps of execution order of SQL 
+1.FROM/JOIN --> get and combine the source rows
+2.WHERE---> filter indivvidual rows
+3.GROUP BY---> Collapse rows into groups
+4.HAVING----> filters groups
+5.SELECT----> choose column/compute aliase
+6.ORDER BY---> sort the result
+7.LIMIT---> cap the rows
